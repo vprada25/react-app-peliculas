@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
+/* const Dotenv = require('dotenv-webpack'); */
 
 const htmlPlugin = new HtmlWebpackPlugin({
     template: "./src/index.html",
@@ -12,14 +12,14 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: ["babel-loader", "eslint-loader"],
+                use: ["babel-loader"/* , "eslint-loader" */],
             },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                /* test: /\.css$/,
+                use: ["style-loader", "css-loader"], */
             },
         ],
     },
-    devtool: 'inline-source-map',
-    plugins: [htmlPlugin, new Dotenv()],
+    /*  devtool: 'inline-source-map', */
+    plugins: [htmlPlugin/* ,  new Dotenv() */ ], 
 };
